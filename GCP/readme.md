@@ -10,3 +10,5 @@
 
 4. Add Virtual Machine want to schedule
    ![image](https://github.com/baidlowi/Orchestration-Mage/assets/79616397/92c95ec2-2ccc-4bfd-bde2-7ffc0b5b5283)
+> Note
+> If not work, Change role account to Owner
