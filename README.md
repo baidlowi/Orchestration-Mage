@@ -188,9 +188,13 @@ prefect agent start <work-queue ID>
 
 After created the work-queue. now the `Prefect agent` can work on the deployment to help the pipeline run in the specify time by schedule the deployment
 
-### 12. Model prediction
+### 12. Test Model prediction
 
 Now the model ready to use after training and deploy to the production and the services should be ready to serve the prediction result of each student who will get **Low**,  **Middle**, or **High** performance.
+
+```bash
+python test.py
+```
 
 ### 13. Model & Data monitoring
 
@@ -198,7 +202,3 @@ Now the model ready to use after training and deploy to the production and the s
 ![alt text](image/image-8.png)
 
 In order to inspect the `data drift` or `model drift` see the **Grafana dashboard** to monitor then check if any data show abnormal or model performance become to bad.
-
-**Monitoring Grafana**
-
-
