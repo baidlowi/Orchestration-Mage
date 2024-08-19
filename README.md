@@ -195,10 +195,3 @@ Now the model ready to use after training and deploy to the production and the s
 ```bash
 python test.py
 ```
-
-### 13. Model & Data monitoring
-
-**Monitoring from log**
-![alt text](image/image-8.png)
-
-In order to inspect the `data drift` or `model drift` see the **Grafana dashboard** to monitor then check if any data show abnormal or model performance become to bad.
