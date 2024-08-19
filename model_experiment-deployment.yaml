@@ -1,0 +1,59 @@
+###
+### A complete description of a Prefect Deployment for flow 'model-experiment'
+###
+name: studentpred
+description: |-
+  Model experiment pipeline:
+  1. Read dataframe
+  2. Make label encoding
+  3. Standardization
+  4. Train and test split
+  5. Model training
+  6. Model evaluation
+  7. Save model
+version: null
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: default-agent-pool
+tags: []
+parameters: {}
+schedule: null
+schedules: []
+is_schedule_active: null
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: model-experiment
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: d226a055-670e-431a-9b6a-36726570bbe6
+  _block_document_name: anonymous-aaa1af04-d7ec-4604-967b-01ce3fd644a8
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: /workspaces/Orchestration-Mage
+entrypoint: model-deployment.py:model_experiment
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    dataset_path:
+      default: ./xAPI-Edu-Data.csv
+      position: 0
+      title: dataset_path
+      type: string
+  required: null
+  definitions: null
+timestamp: '2024-08-19T17:48:13.422918+00:00'
+triggers: []
+enforce_parameter_schema: null
