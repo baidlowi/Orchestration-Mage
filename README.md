@@ -60,6 +60,19 @@ This project implemented a **Grafana** and **Prometheus**-based observability so
   
 ## Project instruction
 
+### Pre-Installation
+
+```bash
+apt update
+apt install containerd
+apt install docker.io
+curl -L https://github.com/docker/compose/releases/download/v2.16.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
+pip install mlflow
+pip install -U prefect
+```
+
 ### 1. Project repository
 
 ```bash
