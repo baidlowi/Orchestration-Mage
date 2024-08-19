@@ -22,13 +22,11 @@ https://github.com/DataTalksClub/mlops-zoomcamp/tree/main/07-project
 This is the final project for the course `mlops-zoomcamp` from [DataTalksClub](https://github.com/DataTalksClub/mlops-zoomcamp).
 
 **Project pain point**:
-Higher education has a complex challenge to understand the performance of its students which influences the success of these students. Academic grades, student activity, and background can influence student success. This research uses data from the University of Northampton, United Kingdom which is analyzed using a classification algorithm method to predict student performance as support for improving the quality of higher education for the better. This research uses the Random Forest, Support Vector Machine, Logistic Regression, Naive Bayes, and K-Nearest Neighbors algorithm methods to explore and select the best algorithm for predictions. The prediction results obtained in this research obtained the best model in Random Forest with an accuracy of 95%. With these results, it is intended that educational institutions can identify needs and provide appropriate support to students in order to increase their graduation rates.
-
-Since I am a Data Engineer in the Telecommunication industry, I have been interested in Data Science. I have decided to combine my interests and my current industry and do some projects with the course mlops-zoomcamp for the final project.
+Higher education has a complex challenge to understand the performance of its students which influences the success of these students. Academic grades, student activity, and background can influence student success. This research uses data from the University of Northampton, United Kingdom which is analyzed using a classification algorithm method to predict student performance as support for improving the quality of higher education for the better. 
 
 The project provides an online service for predicting student who will have the performance of their studies.
 
-The project's focus is to make a Production service with experiment tracking using **MLflow**, pipeline automation using **Prefect**, and observability using **Evidently**, **Prometheus**, and **Grafana**.
+The project's focus is to make a Production service with experiment tracking using **MLflow**, pipeline automation using **Prefect** as workflow orchestration, and observability using **Prometheus**, and **Grafana** for monitoring.
 
 ## Dataset
 
@@ -54,11 +52,11 @@ This project repository contains 2 folders and a README.md
 
 ## Project overview
 
-The project started by the training session to train the model with "`model-training.py`" and promote the model to the model registry with "`model-registry.py`" and store the model artifacts and save the model with "`pickle`" file. **MLflow** being used for model experiment tracking, model registry, store the model artifacts by saving to the "`studentpred.db`" 
+The project started by the training the model with `model-training.py` and promote the model to the MLFlow registry with `model-registry.py`. **MLflow** being used for model experiment tracking, model registry, store the model artifacts by saving to the database `studentpred.db`. 
 
-In order to make the machine learning pipeline then **Prefect** come to work on the project. The Prefect has been used as a workflow orchestrator in the project by deploying the project creating the `task` and `flow` and then scheduling the pipeline to run at the time the pipeline should schedule.
+**Prefect** is a powerful tool for orchestrating complex workflows, including machine learning pipelines. It provides a robust framework for defining, scheduling, and monitoring tasks, making it an excellent choice for managing the various components of an ML project.
 
-Apart from this the observability for the service is the task being implemented to ensure the operations team can observability by a combination of **Grafana** and **Prometheus**. These services will provide real-time model performance and data drift from the production. So the operation can handle the problems immediately or requests other teams to help and discuss to make the decision together.
+This project implemented a **Grafana** and **Prometheus**-based observability solution to empower the operations team. Prometheus, a time-series database and monitoring system, collects metrics from various sources. Grafana, an open-source visualization platform, enables the team to analyze this data effectively. This combined solution allows the operations team to swiftly address issues or collaborate with other teams for informed decision-making
   
 ## Project instruction
 
@@ -189,5 +187,5 @@ Now the model ready to use after training and deploy to the production and the s
 In order to inspect the `data drift` or `model drift` see the **Grafana dashboard** to monitor then check if any data show abnormal or model performance become to bad.
 
 **Monitoring Grafana**
-![alt text](image/image-7.png)
+
 
